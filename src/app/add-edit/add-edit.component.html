@@ -1,0 +1,59 @@
+<div id="ss">
+<div mat-dialog-title>
+    <h1>Assign Task</h1>
+</div>
+<form [formGroup]="addform" (ngSubmit)="onsubmit()" >
+<div mat-dialog-content class="content">
+    <div class="row">
+  
+  <mat-form-field appearance="outline">
+    <mat-label class="write">Name</mat-label>
+    <input matInput type="text" placeholder="Ex.VASUDEV S P" formControlName="Name" class="write">
+  </mat-form-field>
+
+</div>
+
+<div class="row" >
+    <mat-form-field appearance="outline" >
+      <mat-label class="write">Email</mat-label>
+      <input matInput type="email" placeholder="Ex.gmail@gmail.com" formControlName="email" class="write">
+    </mat-form-field>
+  
+  </div>
+
+  <div class="row">
+ 
+
+     <mat-form-field class="example-full-width" appearance="outline" >
+        <mat-label class="write">Task Details</mat-label>
+        <textarea matInput placeholder="Ex.Task Details" formControlName="taskdetails" class="write"></textarea>
+      </mat-form-field>
+  </div>
+
+  <div class="row">
+  <mat-form-field appearance="outline">
+    <mat-label class="write" >Duedate</mat-label>
+    <input matInput [matDatepicker]="picker" formControlName="deadline" class="write">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  </div>
+
+  <div class="row" id="completion">
+    <mat-radio-group aria-label="Task Completion Details" formControlName="status">
+        <mat-label class="write" ><strong>Status:</strong></mat-label>
+        <mat-radio-button value="Complete" ><em>Completed</em></mat-radio-button>
+        <mat-radio-button value="Incomplete"  ><em>Incompleted</em></mat-radio-button>
+      </mat-radio-group>
+  </div>
+
+</div>
+
+<div mat-dialog-actions class="action">
+
+    <button mat-raised-button type="button" [mat-dialog-close]="false"  class="write">Cancel</button>
+    <button mat-raised-button  type="submit"  class="write">{{data ? 'Update': 'Save'}}</button>
+</div>
+</form>
+</div>

@@ -1,0 +1,37 @@
+.row{
+    display: flex;
+    gap: 10px;
+
+    mat-form-field{
+        width: 100%;
+      }
+      
+}
+h1{
+    font-family:'Courier New', Courier, monospace;
+    
+}
+.content{
+    padding-top: 10px;
+   
+}
+.write{
+    font-family:'Courier New', Courier, monospace;
+}
+
+.action{
+    padding:15px 10px 10px;
+    
+    button{
+        flex: 1;
+        background: linear-gradient(to right, #d3cce3, #e9e4f0);
+    }
+}
+
+#completion{
+  padding: 15px 0 10px;
+}
+
+#ss{
+    background: linear-gradient(to right, #f7f8f8, #acbb78);
+}
